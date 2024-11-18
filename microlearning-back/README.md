@@ -52,7 +52,11 @@ docker-compose up
     - Monter les scripts SQL dans le conteneur pour initialiser la base de données.
 
 ### 3. Initialiser la base de données
-- Méthode 1 : Via IntellIJ : sélectionnez les scripts à exécuter
+- Méthode 1 : Via IntellIJ :
+Ajouter la datasource : (pass: root)
+  - ![img_1.png](img_1.png)
+  - ![img_2.png](img_2.png)
+Exécuter les scripts SQL dans le dossier initdb :
   - ![img.png](img.png)
 - Méthode 2 : Assurez-vous que le conteneur PostgreSQL est en cours d'exécution. Ensuite :
 ```bash
