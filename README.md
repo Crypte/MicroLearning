@@ -53,4 +53,4 @@ Voici la liste des contributeurs du projet :
 
 - Mauzé Louis
 
-- Torjman Aura
+- Tordjman Aura
