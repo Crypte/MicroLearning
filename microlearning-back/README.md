@@ -40,12 +40,7 @@ Ce projet est une application Java Spring Boot utilisant une base de données Po
 
 ### 1. Configurer fichier .env
 - Renommer le fichier .env.sample --> .env
-- Remplissez avec vos valeurs
-```bash
-DATABASE_USER=<votre user>
-DATABASE_PASSWORD=<votre pass>
-DATABASE_NAME=<votre nom de db>
-```
+- Ne pas changer les valeurs
 
 ### 2. Lancer le conteneur PostgreSQL
 - Le fichier `docker-compose.yml` configure un conteneur PostgreSQL. Pour le démarrer :
