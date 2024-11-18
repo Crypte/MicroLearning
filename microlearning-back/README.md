@@ -38,11 +38,6 @@ Ce projet est une application Java Spring Boot utilisant une base de données Po
 
 ## 🚀 Installation
 
-Tout d'abord :
-```bash
-mvn clean install
-```
-Ensuite,
 ### 1. Configurer fichier .env
 - Renommer le fichier .env.sample --> .env
 - Remplissez avec vos valeurs
