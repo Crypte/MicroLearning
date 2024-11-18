@@ -23,9 +23,9 @@ Avant de commencer, assurez-vous d'avoir installé les éléments suivants :
 
 ## Installation
 
-1. Mettez vous à la racine du projet :
+1. Mettez vous à la racine du front :
 ```bash
-cd <nom-du-projet>
+cd microlearning-front
 ```
 
 2.  Installez les dépendances :
