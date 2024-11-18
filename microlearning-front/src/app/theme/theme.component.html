@@ -1,0 +1,13 @@
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 p-6">
+  <div *ngFor="let theme of themes" class="flex w-full">
+    <nav class="w-full flex justify-items-center">
+      <a
+        href="/theme/{{ theme.id }}"
+        class="theme-card p-3 text-center flex no-underline justify-center items-center h-48 w-56 rounded-lg shadow-lg text-black text-2xl font-semibold cursor-pointer transition-transform transform hover:scale-110 hover:shadow-xl"
+        style="background-color: #ffffff"
+      >
+        {{ theme.name }}
+      </a>
+    </nav>
+  </div>
+</div>

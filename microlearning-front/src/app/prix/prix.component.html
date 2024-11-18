@@ -1,0 +1,61 @@
+<div class="container mx-auto py-12 px-6">
+  <!-- Titre principal -->
+  <h2 class="text-4xl font-bold text-center text-gray-800 mb-8">
+    Nos Abonnements
+  </h2>
+
+  <!-- Grille des abonnements -->
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+    <!-- Freemium Plan -->
+    <div class="relative bg-white shadow-lg rounded-lg p-6 border border-gray-200 transition-transform hover:scale-105">
+      <h3 class="text-2xl font-semibold mb-4 text-gray-800">Freemium</h3>
+      <p class="text-gray-700 text-lg mb-6">0€ / mois</p>
+      <ul class="text-gray-600 mb-6 space-y-2">
+        <li>Accès aux cours de base</li>
+        <li>Accès limité au contenu</li>
+        <li>Support limité</li>
+      </ul>
+      <button pButton routerLink="/register" label="Commencer gratuitement" class="p-button-primary w-full"></button>
+
+      <!-- Badge Freemium -->
+      <span class="absolute top-4 right-4 bg-green-200 text-green-800 text-sm px-3 py-1 rounded-full">
+        Populaire
+      </span>
+    </div>
+
+    <!-- Standard Plan -->
+    <div class="relative bg-white shadow-lg rounded-lg p-6 border border-blue-500 transition-transform hover:scale-105">
+      <h3 class="text-2xl font-semibold text-blue-600 mb-4">Standard</h3>
+      <p class="text-gray-700 text-lg mb-6">4,99€ / mois</p>
+      <ul class="text-gray-600 mb-6 space-y-2">
+        <li>Accès à tous les cours</li>
+        <li>Contenu exclusif</li>
+        <li>Support prioritaire</li>
+      </ul>
+      <button pButton routerLink="/register" label="S'abonner" class="p-button-primary w-full"></button>
+
+      <!-- Badge recommandé -->
+      <span class="absolute top-4 right-4 bg-blue-200 text-blue-800 text-sm px-3 py-1 rounded-full">
+        Recommandé
+      </span>
+    </div>
+
+    <!-- Premium Plan -->
+    <div class="relative bg-white shadow-lg rounded-lg p-6 border border-gray-200 transition-transform hover:scale-105">
+      <h3 class="text-2xl font-semibold mb-4 text-gray-800">Premium</h3>
+      <p class="text-gray-700 text-lg mb-6">9,99€ / mois</p>
+      <ul class="text-gray-600 mb-6 space-y-2">
+        <li>Accès illimité à tous les cours</li>
+        <li>Sessions de mentorat</li>
+        <li>Contenu personnalisé</li>
+      </ul>
+      <button pButton routerLink="/register" label="S'abonner" class="p-button-primary w-full"></button>
+
+      <!-- Badge Premium -->
+      <span class="absolute top-4 right-4 bg-yellow-200 text-yellow-800 text-sm px-3 py-1 rounded-full">
+        Premium
+      </span>
+    </div>
+  </div>
+</div>

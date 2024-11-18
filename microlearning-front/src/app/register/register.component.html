@@ -1,0 +1,64 @@
+<div class="flex items-center justify-center min-h-screen bg-gray-100">
+  <div class="bg-white p-8 rounded-lg shadow-lg max-w-md w-full">
+    <h2 class="text-3xl font-semibold text-center text-gray-800">Inscription</h2>
+
+    <!-- Formulaire d'inscription -->
+    <form class="mt-6" (ngSubmit)="onSubmit()">
+      <!-- Champ Username -->
+      <div class="mb-4">
+        <label for="username" class="block text-gray-700 mb-2">Username</label>
+        <input
+          id="username"
+          type="text"
+          required
+          [(ngModel)]="username"
+          name="username"
+          class="w-full"
+          pInputText
+          placeholder="Entrez votre nom complet"
+        />
+      </div>
+
+      <!-- Champ Email -->
+      <div class="mb-4">
+        <label for="email" class="block text-gray-700 mb-2">Adresse Email</label>
+        <input
+          id="email"
+          type="email"
+          required
+          [(ngModel)]="email"
+          name="email"
+          class="w-full"
+          pInputText
+          placeholder="Entrez votre email"
+        />
+      </div>
+
+      <!-- Champ Mot de passe -->
+      <div class="mb-4">
+        <label for="password" class="block text-gray-700 mb-2">Mot de passe</label>
+        <p-password
+          id="password"
+          required
+          [(ngModel)]="password"
+          name="password"
+          class="p-fluid"
+          [feedback]="false"
+          placeholder="Entrez votre mot de passe"
+        ></p-password>
+      </div>
+
+      <!-- Boutons -->
+      <div class="flex justify-center flex-col gap-4">
+        <p-button class="p-fluid" type="submit" label="S'inscrire"></p-button>
+        <p-button routerLink="/" class="p-fluid" [outlined]="true" label="Retour"></p-button>
+      </div>
+    </form>
+
+    <!-- Lien vers la connexion -->
+    <p class="mt-6 text-center text-sm text-gray-600">
+      Vous avez déjà un compte ?
+      <a routerLink="/login" class="text-indigo-600 hover:text-indigo-500">Connectez-vous</a>
+    </p>
+  </div>
+</div>

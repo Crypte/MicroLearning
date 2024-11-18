@@ -1,0 +1,24 @@
+<div
+  class="min-h-screen flex flex-col items-center justify-center bg-gradient-to-r from-purple-400 to-green-300"
+>
+  <div
+    class="feed flex flex-col items-center justify-center"
+    style="padding-top: 80px"
+  >
+    <app-card
+      *ngIf="currentCard"
+      [title]="currentCard.title"
+      [subtitle]="currentCard.course.name"
+      [content]="currentCard.content"
+      [imageUrl]="currentCard.img"
+      class="rounded-lg shadow-lg"
+    ></app-card>
+    <button
+      mat-button
+      (click)="showRandomCard()"
+      class="bg-gradient-to-r mt-4 from-purple-400 to-green-300 text-black font-semibold py-2 px-4 border border-gray-300 rounded-lg shadow-md cursor-pointer flex justify-center items-center hover:from-green-300 hover:to-purple-400 whitespace-nowrap"
+    >
+      Carte suivante !
+    </button>
+  </div>
+</div>

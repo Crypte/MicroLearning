@@ -1,0 +1,58 @@
+<div class="flex flex-col items-center justify-center p-6 mt-6"></div>
+
+<!-- Liste de cours sous forme de boîtes avec dégradé en ligne -->
+<div class="flex flex-wrap gap-4 mt-8 justify-center">
+  <div *ngFor="let course of courses" class="flex">
+    <div
+      (click)="selectCourse(course.id)"
+      class="bg-gradient-to-r from-purple-400 to-green-300 text-black font-semibold py-2 px-4 border border-gray-300 rounded-lg shadow-md cursor-pointer flex justify-center items-center hover:from-green-300 hover:to-purple-400 whitespace-nowrap"
+    >
+      {{ course.name }}
+    </div>
+  </div>
+
+  <!-- Colonne pour les cartes du cours sélectionné -->
+  <div
+    *ngIf="selectedCourse && cards.length > 0"
+    class="flex justify-center items-center"
+  >
+    <div class="w-full max-w-4xl">
+      <div
+        *ngIf="selectedCourse && cards.length > 0"
+        class="flex justify-center items-center"
+      >
+        <div class="relative w-full max-w-4xl">
+          <!-- Bouton de navigation gauche -->
+          <button
+            class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full hover:bg-gray-700 focus:outline-none z-10"
+            (click)="previous()"
+          >
+            ❮
+          </button>
+
+          <!-- Carrousel des cartes avec espacement et largeur ajustée -->
+          <div
+            class="flex transition-transform duration-500 ease-in-out space-x-4"
+            [ngStyle]="{ transform: 'translateX(' + translateX + '%)' }"
+          >
+            <div *ngFor="let card of cards" class="w-2/4 flex-shrink-0 mx-2">
+              <!-- Ajuste la largeur de chaque carte à 75% du conteneur et ajoute une marge horizontale -->
+              <app-card
+                [title]="card.title"
+                [content]="card.content"
+              ></app-card>
+            </div>
+          </div>
+
+          <!-- Bouton de navigation droite -->
+          <button
+            class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full hover:bg-gray-700 focus:outline-none z-10"
+            (click)="next()"
+          >
+            ❯
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

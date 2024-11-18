@@ -1,0 +1,33 @@
+<div class="flex items-center justify-center min-h-screen bg-gray-100">
+  <div class="bg-white p-8 rounded-lg shadow-lg max-w-md w-full">
+    <h2 class="text-3xl font-semibold text-center text-gray-800">Connexion</h2>
+
+    <!-- Formulaire de connexion -->
+    <form class="mt-6" (ngSubmit)="onSubmit()">
+      <div class="mb-4">
+        <label class="block text-gray-700 mb-2">Username</label>
+        <input type="text" class="w-full" pInputText [(ngModel)]=username name=username required />
+      </div>
+
+      <div class="mb-6">
+        <label class="block text-gray-700 mb-2">Mot de passe</label>
+        <p-password class="p-fluid"  [feedback]="false" [(ngModel)]=password name=password required/>
+      </div>
+
+      <div class="flex mb-6">
+
+        <a href="#" class="text-sm text text-indigo-600 hover:text-indigo-500">Mot de passe oublié ?</a>
+      </div>
+      <div class="flex justify-center flex-col gap-4">
+        <p-button class="p-fluid" type="submit"  label="Connexion"></p-button>
+        <p-button routerLink="/" class="p-fluid" [outlined]="true" label="Retour"></p-button>
+      </div>
+
+    </form>
+
+    <p class="mt-6 text-center text-sm text-gray-600">
+      Vous n'avez pas de compte ?
+      <a href="/register" class="text-indigo-600 hover:text-indigo-500">Inscrivez-vous</a>
+    </p>
+  </div>
+</div>

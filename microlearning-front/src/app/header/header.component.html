@@ -1,0 +1,42 @@
+<header class="flex justify-between items-center py-3 px-10 fixed top-0 backdrop-blur-lg w-full">
+  <div class="flex items-center space-x-14">
+    <a routerLink="/" class="no-underline">
+      <div class="flex items-center">
+        <span class="text-xl font-semibold text-gray-800 ml-2">ISHIKI</span>
+      </div>
+    </a>
+    <nav class="flex items-center gap-8">
+      <a routerLink="feed" class="transition text-black no-underline">Feed</a>
+      <a routerLink="prix" class="transition text-black no-underline">Prix</a>
+      <a routerLink="concept" class="transition text-black no-underline">Concept</a>
+    </nav>
+  </div>
+
+  <div class="flex gap-4">
+    <!-- Boutons visibles uniquement si l'utilisateur n'est pas authentifié -->
+    <div *ngIf="!isAuthenticated">
+      <button
+        pButton
+        routerLink="login"
+        class="p-button-text text-black"
+        label="Connexion"
+      ></button>
+      <button
+        pButton
+        routerLink="register"
+        class="p-button-raised p-button-primary"
+        label="S'inscrire"
+      ></button>
+    </div>
+
+    <!-- Bouton visible uniquement si l'utilisateur est authentifié -->
+    <div *ngIf="isAuthenticated">
+      <button
+        pButton
+        class="p-button-raised p-button-danger"
+        (click)="logout()"
+        label="Déconnexion"
+      ></button>
+    </div>
+  </div>
+</header>
